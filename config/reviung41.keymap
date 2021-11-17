@@ -59,12 +59,12 @@
 // ----------------------------------------------------------------------------------
 // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL |
 // |    |  _  |  +  |  {  |  }  | "|" |   | F1  | F2  | F3  | F4  | F5  | F6  |
-// |    | VOL+| VOL-| MUTE| ESC | C(J)|   | F7  | F8  | F9  | F10 | F11 | F12 |
+// |    | VOL-| VOL+| MUTE| ESC | C(J)|   | F7  | F8  | F9  | F10 | F11 | F12 |
 //                       |     |     | RET | ADJ |     |
                         bindings = <
    &trans &kp EXCL     &kp AT       &kp HASH   &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp LPAR  &kp RPAR  &kp DEL
-   &trans &kp MINUS    &kp KP_PLUS  &kp LBRC   &kp RBRC &kp PIPE       &kp F1    &kp F2   &kp F3    &kp F4    &kp F5    &kp F6
-   &trans &kp C_VOL_UP &kp C_VOL_DN &kp K_MUTE &kp ESC  &kp LC(J)      &kp F7    &kp F8   &kp F9    &kp F10   &kp F11   &kp F12
+   &trans &kp UNDER    &kp PLUS     &kp LBRC   &kp RBRC &kp PIPE       &kp F1    &kp F2   &kp F3    &kp F4    &kp F5    &kp F6
+   &trans &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE &kp ESC  &kp LC(J)      &kp F7    &kp F8   &kp F9    &kp F10   &kp F11   &kp F12
                                        &trans      &trans       &kp RET        &mo 3       &trans
                         >;
                 };
@@ -85,14 +85,14 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | RESET |     |     |     |     | OUT_TOG|
+// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1   | BT2 | BT3 | BT4 | BT5 | BT CLR |
+// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |        |     |     |     |     |        |
+// |          |          |          |          |    |         |   | OUT_TOG|     |     |     |     | RESET  |
 //                                               |     |     |     |     |     |
                         bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &none        &none        &none        &none        &none        &none
-   &none           &none           &none           &none           &none &none              &reset       &none        &none        &none        &none        &out OUT_TOG
+   &none           &none           &none           &none           &none &none              &out OUT_TOG &none        &none        &none        &none        &reset 
                                                               &trans      &trans       &tog 3        &trans      &trans
                         >;
                 };
