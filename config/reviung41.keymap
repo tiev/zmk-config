@@ -33,6 +33,10 @@
     };
 };
 
+&sk {
+    release-after-ms = <1000>;
+};
+
 / {
         chosen {
             zmk,underglow = &led_strip;
